@@ -1,9 +1,8 @@
-export default function CustomButton({ text, color }) {
-  function handleClick() {
-    alert(`Clicked ${color} ${text}`);
-  }
+export default function CustomButton({ text, color, onCustomClick }) {
   return (
-    <button onClick={handleClick} style={{ backgroundColor: color }}>
+    <button
+      onClick={() => onCustomClick(text)}
+      style={{ backgroundColor: color }}>
       {text}
     </button>
   );
