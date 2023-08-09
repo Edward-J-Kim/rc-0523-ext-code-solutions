@@ -3,9 +3,8 @@ export default function RegistrationFormUncontrolled() {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    const state = Object.fromEntries(formData.entries());
-
-    console.log(state);
+    const formValues = Object.fromEntries(formData.entries());
+    console.log('Form values:', formValues);
   }
   return (
     <form onSubmit={handleSumbit}>
